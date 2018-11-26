@@ -1,5 +1,6 @@
 package personal.yuanding.restdemo.user;
 
+import com.github.pagehelper.Page;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import personal.yuanding.restdemo.base.BaseRestService;
@@ -14,6 +15,11 @@ public class UserRestServiceImpl implements BaseRestService<User> {
     @Override
     public List<User> list() {
         return userMapper.listUser();
+    }
+
+    @Override
+    public Page<User> listByPage() {
+        return userMapper.listByPage();
     }
 
     @Override

@@ -32,6 +32,13 @@
         where is_deleted=0
     </select>
 
+    <select id="listByPage" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List" />
+        from user
+        where is_deleted=0
+    </select>
+
     <select id="getUser" resultMap="BaseResultMap">
         SELECT
         <include refid="Base_Column_List" />

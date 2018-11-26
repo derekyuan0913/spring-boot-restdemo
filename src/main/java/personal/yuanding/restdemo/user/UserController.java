@@ -1,6 +1,9 @@
 package personal.yuanding.restdemo.user;
+import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import personal.yuanding.restdemo.response.pagination.SimplePageInfo;
+
 import java.util.List;
 
 
@@ -11,9 +14,18 @@ public class UserController {
     @Autowired
     private UserRestServiceImpl userService;
 
+//    @GetMapping
+//    public List<User> userList() {
+//        return userService.list();
+//    }
+
     @GetMapping
-    public List<User> userList() {
-        return userService.list();
+    public SimplePageInfo<User> userList(
+            @RequestParam(defaultValue = "1") int pageNum,
+            @RequestParam(defaultValue = "10") int pageSize) {
+        PageHelper.startPage(pageNum, pageSize);
+        SimplePageInfo<User> pageInfo =  new SimplePageInfo<>(userService.listByPage());
+        return pageInfo;
     }
 
     @GetMapping("/{id}")

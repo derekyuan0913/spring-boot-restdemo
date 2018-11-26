@@ -1,10 +1,12 @@
 package personal.yuanding.restdemo.base;
-
+import com.github.pagehelper.Page;
 import java.util.List;
 
 public interface BaseRestService<T> {
 
     public List<T> list();
+
+    public Page<T> listByPage();
 
     public T get(int id);
 

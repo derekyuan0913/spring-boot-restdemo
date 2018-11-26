@@ -1,4 +1,5 @@
 package personal.yuanding.restdemo.user;
+import com.github.pagehelper.Page;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;
@@ -7,6 +8,8 @@ import java.util.List;
 public interface UserMapper {
 
     List<User> listUser();
+
+    Page<User> listByPage();
 
     User getUser(int id);
 
