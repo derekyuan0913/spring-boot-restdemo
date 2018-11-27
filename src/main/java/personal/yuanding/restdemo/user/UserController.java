@@ -2,9 +2,7 @@ package personal.yuanding.restdemo.user;
 import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import personal.yuanding.restdemo.response.pagination.SimplePageInfo;
-
-import java.util.List;
+import personal.yuanding.restdemo.pagination.SimplePageInfo;
 
 
 @RestController

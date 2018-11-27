@@ -1,4 +1,4 @@
-package personal.yuanding.restdemo.response;
+package personal.yuanding.restdemo.exception;
 
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.http.HttpHeaders;

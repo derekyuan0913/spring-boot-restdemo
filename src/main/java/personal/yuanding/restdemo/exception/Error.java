@@ -1,4 +1,4 @@
-package personal.yuanding.restdemo.response;
+package personal.yuanding.restdemo.exception;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 

@@ -1,4 +1,4 @@
-package personal.yuanding.restdemo.response.pagination;
+package personal.yuanding.restdemo.pagination;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.github.pagehelper.Page;
